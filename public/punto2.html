@@ -14,16 +14,20 @@
        <input type = "text" id="nombre" name="nombre" required><br><br>
 
        <label for="tipo"> tipo de mascotas: </label>
-       <input type = "text" id="tipo" required><br><br>
+       <input type = "text" id="tipo" name= "tipo" required><br><br>
        
-       <label for="sueñio"> dueñio: </label>
-       <input type = "text" id="dueñio" required><br><br>
+       <label for="dueñio"> dueñio: </label>
+       <input type = "text" id="dueñio" name="dueñio" required><br><br>
        
        <label for="edad"> edad: </label>
-       <input type = "text" id="edad" required><br><br>
+       <input type = "number" id="edad" name="edad" required><br><br> 
+       <button type="submit">Enviar datos</button>
     </form>
-
+  
     <script src="punto2.js"></script>
+
+    <h3>Clientes ingresados</h3>
+    <ul id="listaMascotas"></ul>
 
 </body>
 </html>
