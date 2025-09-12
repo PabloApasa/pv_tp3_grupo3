@@ -1,0 +1,211 @@
+/* MODO CLARO */
+:root {
+    --bg-main: #f7f9fb;
+    --bg-container: #fff;
+    --bg-list: #f7f9fb;
+    --bg-stats: #f1f5f9;
+    --border: #e3e8ee;
+    --primary: #0074d9;
+    --primary-dark: #005fa3;
+    --text: #222;
+    --vacunada: #2ecc40;
+    --no-vacunada: #ff4136;
+}
+
+/* MODO OSCURO */
+body.dark-mode {
+    --bg-main: #181c24;
+    --bg-container: #23283a;
+    --bg-list: #23283a;
+    --bg-stats: #1a1e2b;
+    --border: #2c3244;
+    --primary: #4fc3f7;
+    --primary-dark: #0288d1;
+    --text: #e3e8ee;
+    --vacunada: #43e97b;
+    --no-vacunada: #ff6b81;
+}
+
+body, h1, h2, h3, p, ul, li, label, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: var(--bg-container);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 30px 40px;
+    transition: background 0.3s;
+}
+
+h1 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 4px;
+}
+
+h3 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form {
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #dbeafe;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 2px;
+    background: var(--bg-main);
+    color: var(--text);
+    transition: border-color 0.2s, background 0.3s, color 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 4px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+button[type="submit"], .modo-btn {
+    width: 100%;
+    background: var(--primary);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover, .modo-btn:hover {
+    background: var(--primary-dark);
+}
+
+.modo-btn {
+    width: auto;
+    float: right;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 8px 18px;
+    font-size: 1rem;
+}
+
+hr {
+    margin: 32px 0 18px 0;
+    border: none;
+    border-top: 2px solid #dbeafe;
+}
+
+#listaMascotas {
+    list-style: none;
+    padding: 0;
+}
+
+#listaMascotas li {
+    background: var(--bg-list);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 18px;
+    padding: 18px 22px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: background 0.3s, border 0.3s;
+}
+
+#listaMascotas li strong {
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+#listaMascotas li .vacunada {
+    color: var(--vacunada);
+    font-weight: bold;
+}
+
+#listaMascotas li .no-vacunada {
+    color: var(--no-vacunada);
+    font-weight: bold;
+}
+
+#estadisticas {
+    background: var(--bg-stats);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: background 0.3s;
+}
+
+#estadisticas p {
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 16px 8px;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+}
