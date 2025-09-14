@@ -2,8 +2,12 @@
 export const mascotas = [];
 
 // Obtener elementos del DOM
-const mascotaForm = document.getElementById('mascotaForm');
-const listaMascotas = document.getElementById('listaMascotas');
-const totalMascotasSpan = document.getElementById('totalMascotas');
-const vacunadasSpan = document.getElementById('vacunadas');
-const noVacunadasSpan = document.getElementById('noVacunadas');
+export const mascotaForm = document.getElementById('mascotaForm');
+export const listaMascotas = document.getElementById('listaMascotas');
+export const totalMascotasSpan = document.getElementById('totalMascotas');
+export const vacunadasSpan = document.getElementById('vacunadas');
+export const noVacunadasSpan = document.getElementById('noVacunadas');
+
+export function eliminarMascota(index) {
+    mascotas.splice(index, 1);
+}
