@@ -8,14 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         const nuevaMascota = {
-            nombre: document.getElementById('nombre').value,
-            tipo: document.getElementById('tipo').value,
-            edad: parseInt(document.getElementById('edad').value),
-            duenio: document.getElementById('duenio').value, // uso "duenio" para que no se pierda
-            vacunada: document.querySelector('input[name="vacunada"]:checked')
-                ? document.querySelector('input[name="vacunada"]:checked').value === 'true'
-                : false,
-            precio: parseFloat(document.getElementById('precio').value)
+    nombre: document.getElementById('nombre').value,
+    tipo: document.getElementById('tipo').value,
+    edad: parseInt(document.getElementById('edad').value),
+    dueno: document.getElementById('dueno').value, // corregido
+    vacunada: document.querySelector('input[name="vacunada"]:checked')
+        ? document.querySelector('input[name="vacunada"]:checked').value === 'true'
+        : false
         };
 
         agregarMascota(nuevaMascota);
